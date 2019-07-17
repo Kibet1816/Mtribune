@@ -1,0 +1,18 @@
+{% extends 'all-news/base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        
+            {% for news_item in news %}
+            <h1> {{news_item.title}} </h1>
+        
+        <p> {{news_item.post}} </p>
+        {% empty %}
+        <h1>There are no news items</h1>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
