@@ -33,7 +33,7 @@ if config('MODE') == 'dev':
 }
 else:
     DATABASES = {
-    'default' = dj_database_url(
+    'default':dj_database_url.config(
         default = config('DATABASE_URL')
     )
 }
@@ -61,7 +61,7 @@ STATICFILES_DIRS = (
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'gorgonsonofskrygon'
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
